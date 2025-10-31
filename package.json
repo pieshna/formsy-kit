@@ -1,6 +1,6 @@
 {
   "name": "formsy-kit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Librería de componentes de formularios y utilidades para Next.js.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
