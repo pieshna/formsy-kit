@@ -1,12 +1,14 @@
 {
   "name": "formsy-kit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Librería de componentes de formularios y utilidades para Next.js.",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**",
+    "README.md",
+    "LICENSE"
   ],
   "repository": {
     "type": "git",
@@ -50,7 +52,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --clean",
     "dev": "tsup src/index.ts --watch"
   },
   "tsup": {
@@ -70,5 +72,28 @@
       "flowbite-react",
       "react-signature-canvas"
     ]
-  }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./forms/*": {
+      "types": "./dist/forms/*.d.ts",
+      "import": "./dist/forms/*.mjs",
+      "require": "./dist/forms/*.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ],
+      "forms/*": [
+        "dist/forms/*"
+      ]
+    }
+  },
+  "sideEffects": false
 }
