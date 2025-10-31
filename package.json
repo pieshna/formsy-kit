@@ -1,6 +1,6 @@
 {
   "name": "formsy-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Librería de componentes de formularios y utilidades para Next.js.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,8 +31,8 @@
     "dayjs": "^1.11.19",
     "flowbite-react": "^0.12.10",
     "is-hotkey": "^0.2.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19",
     "react-dropzone": "^14.3.8",
     "react-phone-input-2": "^2.15.1",
     "slate": "^0.118.1",
