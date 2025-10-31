@@ -1,0 +1,74 @@
+{
+  "name": "formsy-kit",
+  "version": "1.0.0",
+  "description": "Librería de componentes de formularios y utilidades para Next.js.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pieshna/formsy-kit.git"
+  },
+  "keywords": [
+    "react",
+    "form",
+    "forms",
+    "components",
+    "fetch",
+    "ui",
+    "library"
+  ],
+  "author": "Saludirecta-Software",
+  "license": "MIT",
+  "peerDependencies": {
+    "@heroui/react": "^2.8.5",
+    "@internationalized/date": "^3.10.0",
+    "@react-aria/i18n": "^3.12.13",
+    "@tabler/icons-react": "^3.35.0",
+    "dayjs": "^1.11.19",
+    "flowbite-react": "^0.12.10",
+    "is-hotkey": "^0.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-dropzone": "^14.3.8",
+    "react-phone-input-2": "^2.15.1",
+    "slate": "^0.118.1",
+    "slate-history": "^0.113.1",
+    "slate-react": "^0.118.2",
+    "rsuite": "^5.83.3",
+    "react-signature-canvas": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/is-hotkey": "^0.1.10",
+    "@types/node": "^24.9.2",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --watch"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "dts": true,
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "external": [
+      "react",
+      "react-dom",
+      "@heroui/react",
+      "@tabler/icons-react",
+      "flowbite-react",
+      "react-signature-canvas"
+    ]
+  }
+}
